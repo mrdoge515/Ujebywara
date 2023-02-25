@@ -42,7 +42,7 @@
 		<input
 			type="submit"
 			on:click={() => findDuplicate()}
-			disabled={!isInputEmpty(link)}
+			disabled={!isInputEmpty(link) || !/^(ftp|http|https):\/\/[^ "]+$/.test(link)}
 			value="Ujeb"
 		/>
 		<div class="cf-turnstile" data-sitekey="0x4AAAAAAACV4J6X-PDLISl4" />
